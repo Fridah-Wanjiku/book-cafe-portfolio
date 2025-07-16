@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Café - Cozy Reads & Brews</title>
+  <style>
+    /* Color Palette: warm coffee + calm neutrals (WCAG compliant) */
+    :root {
+      --primary-color: #6F4E37;       /* Coffee Brown */
+      --secondary-color: #D9CAB3;     /* Light Cream */
+      --accent-color: #C76F51;        /* Warm Terracotta */
+      --background-color: #F9F7F1;    /* Soft Off-White */
+      --text-color: #3E2F1C;          /* Dark Brown */
+      --text-light: #6B5B4A;          /* Medium Brown */
+    }
+
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      padding: 1rem 2rem;
+      color: var(--secondary-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: 'Georgia', serif;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      font-weight: 600;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Cards container - LG layout */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--secondary-color);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .card h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-family: 'Georgia', serif;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      flex-grow: 1;
+      color: var(--text-light);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card button {
+      background-color: var(--accent-color);
+      color: var(--secondary-color);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      align-self: flex-start;
+      transition: background-color 0.3s ease;
+    }
+    .card button:hover {
+      background-color: var(--primary-color);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      font-family: 'Georgia', serif;
+    }
+
+    /* Medium devices (tablets) */
+    @media (max-width: 1023px) {
+      .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Small devices (mobile phones) */
+    @media (max-width: 600px) {
+      .cards-container {
+        grid-template-columns: 1fr;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav a {
+        margin-left: 0;
+        margin-top: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Book Café</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#events">Events</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="cards-container">
+      <section class="card">
+        <h2>Cozy Ambiance</h2>
+        <p>Relax with a good book and your favorite coffee blend in our warm and inviting café atmosphere.</p>
+        <button>Learn More</button>
+      </section>
+
+      <section class="card">
+        <h2>Fresh Brews</h2>
+        <p>We serve a variety of freshly brewed coffees, teas, and delicious pastries sourced locally.</p>
+        <button>View Menu</button>
+      </section>
+
+      <section class="card">
+        <h2>Community Events</h2>
+        <p>Join book clubs, author readings, and creative workshops hosted regularly to engage our community.</p>
+        <button>See Events</button>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Book Café • Designed by You
+  </footer>
+
+  <script>
+    // Optional JS for future interactivity
+  </script>
+</body>
+</html>
